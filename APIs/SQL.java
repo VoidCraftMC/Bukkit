@@ -22,6 +22,7 @@ public class Main extends JavaPlugin implements Listener {
     private String password = "password"; //SQL server password
     private String host = "host:port"; //SQL server host (Ip address or URL). Only add port if it's not 3306
     private String database = "database name"; //Name of database to use
+    //End configuration
     
     
     
