@@ -15,9 +15,16 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
-public class Main
-extends JavaPlugin
-implements Listener {
+public class Main extends JavaPlugin implements Listener {
+    
+    //Configuration (Only edit this)
+    private String username = "username"; //SQL server username
+    private String password = "password"; //SQL server password
+    private String host = "host:port"; //SQL server host (Ip address or URL). Only add port if it's not 3306
+    private String database = "database name"; //Name of database to use
+    
+    
+    
     public void onEnable() {
         PluginManager manager = this.getServer().getPluginManager();
         manager.registerEvents((Listener)this, (Plugin)this);
@@ -64,18 +71,16 @@ implements Listener {
         conn.close();
     }
 
-    public void querySql(String sql) throws SQLException {
+    public String querySql(String sql) throws SQLException {
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("user");
-        dataSource.setPassword("password");
-        dataSource.setServerName("host");
-        dataSource.setDatabaseName("database");
+        dataSource.setUser(username);
+        dataSource.setPassword(password);
+        dataSource.setServerName(host);
+        dataSource.setDatabaseName(database);
         Connection conn = dataSource.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
-        if (rs.next()) {
-            int n = rs.getInt("playernumber");
-        }
+        return rs.next();
         stmt.close();
         conn.close();
     }
