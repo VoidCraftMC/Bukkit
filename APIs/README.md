@@ -3,4 +3,4 @@
 Anything here is free to use, just include the java file in your project, or contact me for a jar. No credit to me is required, but it is apreciated :)
 <br>
 Functions:
-<code>executeSql(query);<br>querySql(query);</code>
+<code>executeSql(query);</code><br><code>querySql(query);</code>
