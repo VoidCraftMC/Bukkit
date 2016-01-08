@@ -3,4 +3,8 @@
 Anything here is free to use, just include the java file in your project, or contact me for a jar. No credit to me is required, but it is apreciated :)
 <br>
 <h3>Functions:</h3>
-<code>executeSql(query);</code><br><code>querySql(query);</code>
+<h5>Execute SQL</h5>
+<code>executeSql(query);</code>
+<h5>Query SQL</h5>
+Used to get a data query from the sql server. For example <code>SELECT * FROM `table_name`;</code><br>
+<code>querySql(query);</code>
