@@ -9,11 +9,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
-/**
- * User: bobacadodl
- * Date: 1/25/14
- * Time: 10:28 PM
- */
+
 public class ImageMessage {
     private final static char TRANSPARENT_CHAR = ' ';
 
