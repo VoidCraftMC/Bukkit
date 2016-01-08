@@ -22,6 +22,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+  /** ©2016 Cameron Clark 
+  Some code is derived from bobacododl's image message api**/
+
 public class Main extends JavaPlugin implements Listener {
 	
 	public void onEnable(){
